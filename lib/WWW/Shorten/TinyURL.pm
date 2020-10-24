@@ -42,7 +42,7 @@ sub makeashorterlink {
         }
         return undef;
     }
-    if ($resp->content =~ m!(\Qhttp://tinyurl.com/\E\w+)!x) {
+    if ($resp->content =~ m!(https?://tinyurl.com/\w+)!x) {
         return $1;
     }
     return;
